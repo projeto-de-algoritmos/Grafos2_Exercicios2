@@ -1,0 +1,106 @@
+5
+4
+gdansk
+2
+2 1
+3 3
+bydgoszcz
+3
+1 1
+3 1
+4 4
+torun
+3
+1 3
+2 1
+4 1
+warszawa
+2
+2 4
+3 1
+2
+gdansk warszawa
+bydgoszcz warszawa
+
+3
+vivo
+2
+2 2
+3 4
+lixo
+2
+1 3
+3 4
+pano
+2
+1 2
+2 1
+2
+vivo pano
+vivo pano
+
+3
+vivo
+2
+2 2
+3 4
+lixo
+2
+1 1
+3 4
+pano
+2
+1 2
+2 1
+5
+vivo pano
+vivo pano
+vivo pano
+pano vivo
+pano vivo
+
+4
+gdansk
+2
+2 1
+3 3
+bydgoszcz
+3
+1 1
+3 1
+4 4
+torun
+3
+1 3
+2 1
+4 1
+warszawa
+2
+2 4
+3 1
+2
+gdansk warszawa
+bydgoszcz warszawa
+
+4
+gdansk
+2
+2 1
+3 3
+bydgoszcz
+3
+1 1
+3 1
+4 4
+torun
+3
+1 3
+2 1
+4 1
+warszawa
+2
+2 4
+3 1
+2
+gdansk warszawa
+bydgoszcz warszawa
