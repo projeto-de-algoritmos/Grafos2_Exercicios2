@@ -21,15 +21,19 @@ Exercícios do LeetCode:
 
 ## Screenshots
 
-Segue a seguir as imagens dos algoritmos enviados no juiz. É possível observar os status de conclusão do problema e o algoritmo enviado.
+A seguir as imagens dos algoritmos enviados no juiz. É possível observar os status de conclusão do problema e uma descrição do algoritmo utilizado.
 
 ### SHPATH - The Shortest Path
 
+Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Em uma lista de cidades, precisa encontrar a menor distância entre duas cidades dado o nome de ambas, sendo um grafo direcionado.
+
+![Imagem SHPATH](assets/SHPATH.png)
+
 ## Instalação
 
-**Linguagem**: C, Python<br>
+**Linguagem**: C++, Python<br>
 
-Para rodar os arquivos em C++, é recomendado utilizar o WSL caso esteja no Windows. Nele, execute os comandos `sudo apt update` e `sudo apt install build-essential` para instalar o g++. O código em C++ também pode ser enviado no próprio (SPOJ)[https://www.spoj.com/] ou compilado e executado no [Ideone](https://ideone.com/). Já para rodar os arquivos em Python, pode ser utilizado o interpretador online [GDB](https://www.onlinegdb.com/) ou instalar o Python na sua máquina (as instruções para instalação podem ser encontradas no [guia de instalação](https://wiki.python.org/moin/BeginnersGuide/Download)).
+Para rodar os arquivos em C++, é recomendado utilizar o WSL caso esteja no Windows. Nele, execute os comandos `sudo apt update` e `sudo apt install build-essential` para instalar o g++. O código em C++ também pode ser enviado no próprio [SPOJ](https://www.spoj.com/) ou compilado e executado no [Ideone](https://ideone.com/). Já para rodar os arquivos em Python, pode ser utilizado o interpretador online [GDB](https://www.onlinegdb.com/) ou instalar o Python na sua máquina (as instruções para instalação podem ser encontradas no [guia de instalação](https://wiki.python.org/moin/BeginnersGuide/Download)).
 
 ## Uso
 
