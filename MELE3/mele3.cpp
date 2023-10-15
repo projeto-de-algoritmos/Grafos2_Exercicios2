@@ -36,26 +36,14 @@ void dijkstra(int f, int l, Item lista[]){
             falta = 0;
             v = abs(lista[pos].dado-index);
             if(d!=0){
-                int offset = lista[pos].prox[i].offset;
-                if(offset){ // elevador reverso, inicia atrasado na outra ponta (offset=1, meio ciclo de ida e volta a mais)
-                    ajuste = (d/v+offset)%2;
-                    if(ajuste==1){
-                        if(d%v==0) falta = v;
-                        else falta = v-(d%v);
-                    } else {
-                        if(d%v==0) falta = 0;
-                        else falta = (v-d%v)+v;
-                    }
-                }
-                else {     // elevador normal (offset=0), inicia com os outros elevadores normais
-                    ajuste = (d/v)%2;
-                    if(ajuste==0){
-                        if(d%v==0) falta = 0;
-                        else falta = (v-d%v)+v;
-                    } else {
-                        if(d%v==0) falta = v;
-                        else falta = v-(d%v);
-                    }
+                int offset = lista[pos].prox[i].offset; // offset = 1, elevador com atraso de meio ciclo, 0 normal
+                ajuste = (d/v+offset)%2;
+                if(ajuste==offset){
+                    if(d%v==0) falta = 0;
+                    else falta = (v-d%v)+v;
+                } else {
+                    if(d%v==0) falta = v;
+                    else falta = v-(d%v);
                 }
             }
             if((v+c+falta)<distancia[index]){
@@ -73,17 +61,18 @@ int main(){
     int k, n, a, b, id = 0;
     cin >> k >> n;
     for(int i=0;i<1007;++i) distancia[i] = 1000000007;
-    Item *elevators = (Item*) calloc(1006, sizeof(Item));
+    Item *elevators = (Item*) malloc(1006*sizeof(Item));
     for(int j=0; j<n; ++j){
         cin >> a;
         cin >> b;
         elevators[a].dado = a;
         elevators[a].prox[elevators[a].count].fim = b;
-        elevators[a].prox[elevators[a].count++].offset = 0;
+        elevators[a].prox[elevators[a].count++].offset = 0; // de a pra b
         elevators[b].dado = b;
         elevators[b].prox[elevators[b].count].fim = a;
-        elevators[b].prox[elevators[b].count++].offset = 1;
+        elevators[b].prox[elevators[b].count++].offset = 1; // de b pra a com atraso
     }
     dijkstra(1, k, elevators);
+    free(elevators);
     return 0;
 }
