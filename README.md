@@ -1,7 +1,7 @@
-# Exercicios1
+# Exercicios2
 
 **Número da Lista**: 2<br>
-**Conteúdo da Disciplina**: Dijkstra<br>
+**Conteúdo da Disciplina**: Dijkstra, Prim, Kruskal<br>
 
 ## Alunos
 
@@ -30,6 +30,10 @@ A seguir as imagens dos algoritmos enviados no juiz. É possível observar os st
 Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Em uma lista de cidades, precisa encontrar a menor distância entre duas cidades dado o nome de ambas, sendo um grafo direcionado.
 
 ![Imagem SHPATH](assets/SHPATH.png)
+
+Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui um tamanho/altura e é desejado encontrar o caminho com o menor esforço, ou seja com a menor variação de altura, entre a célula (0,0) até a célula (n,n). O esforço é definido como sendo a diferença máxima absoluta entre as alturas das células.
+
+![Imagem da página do problema com a submissão aceita.](assets/1631.png)
 
 ## Instalação
 

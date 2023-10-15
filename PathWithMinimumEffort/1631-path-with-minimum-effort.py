@@ -30,13 +30,13 @@ class Solution:
                 tempLinha = lin + mov
                 if (tempLinha, col) not in nosVisitados and tempLinha in range(linhas):
                     maxDif = max(abs(heights[lin][col]-heights[tempLinha][col]), custos[lin][col])      # Pegando a diferenca maxima.
-                    if (custos[tempLinha][col] > maxDif):                                               # Verificando se eh infinito
+                    if (custos[tempLinha][col] > maxDif):                                               # Verificando se eh maior que o limite.
                         custos[tempLinha][col] = maxDif                                                 # Trocando caso sim.
                         heapq.heappush(heap, [tempLinha, col, custos[tempLinha][col]])                  # Colocando o no na heap.
                 # Verificando os visinhos da esquerda e direita.
                 tempCol = col + mov
                 if (lin, tempCol) not in nosVisitados and tempCol in range(colunas):
                     maxDif = max(abs(heights[lin][col]-heights[lin][tempCol]), custos[lin][col])        # Pegando a diferenca maxima.
-                    if (custos[lin][tempCol] > maxDif):                                                 # Verificando se eh infinito
+                    if (custos[lin][tempCol] > maxDif):                                                 # Verificando se eh maior que o limite.
                         custos[lin][tempCol] = maxDif                                                   # Trocando caso sim.
                         heapq.heappush(heap, [lin, tempCol, custos[lin][tempCol]])                      # Colocando o no na heap.
