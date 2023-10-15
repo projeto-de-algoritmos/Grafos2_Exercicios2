@@ -6,60 +6,60 @@ typedef struct nxt{
     int fim;
 } nxt;
 
+int distancia[1006];
+int vis[1006];
+
 typedef struct Item{
     int dado;
     int count;
-    int vis;
     nxt prox[50006];
 } Item;
 
-int tempo = 0;
-
 void dijkstra(int f, int l, Item lista[]){
-    int pos = 0, c = 0, v = 0, kx = 0, ajuste = 0, falta = 0;
+    int pos = 0, c = 0, v = 0, kx = 0, ajuste = 0, falta = 0, d = 0;
     priority_queue<pair<int,int>,vector<pair<int,int> >, greater< pair<int,int> > > pq;
+    distancia[f] = 0;
     pq.push(make_pair(0, f));
     while(!pq.empty()){
-        int mint = 47483647;
         pos = pq.top().second;
         c = pq.top().first;
-        tempo = c;
         pq.pop();
+        d = distancia[lista[pos].dado];
         if(l==pos){
-            printf("%d\n",tempo*5);
+            printf("%d\n", d*5);
             return;
         }
-        lista[pos].vis = 1;
+        vis[lista[pos].dado] = 1;
         for(int i = 0; i<lista[pos].count; ++i){
-            if(lista[lista[pos].prox[i].fim].vis==1) continue;
+            if(vis[lista[pos].prox[i].fim]==1) continue;
             falta = 0;
             v = abs(lista[pos].dado-lista[pos].prox[i].fim);
-            if(tempo!=0){
-                if(lista[pos].prox[i].offset==1){
-                    ajuste = (tempo/v+1)%2;
+            if(d!=0){
+                if(lista[pos].prox[i].offset==1){ // elevador reverso, inicia atrasado na outra ponta (offset+1)
+                    ajuste = (d/v+1)%2;
                     if(ajuste==1){
-                        if(tempo%v==0) falta = v;
-                        else falta = v-(tempo%v);
+                        if(d%v==0) falta = v;
+                        else falta = v-(d%v);
                     } else {
-                        if(tempo%v==0) falta = 0;
-                        else falta = (v-tempo%v)+v;
+                        if(d%v==0) falta = 0;
+                        else falta = (v-d%v)+v;
                     }
                 }
-                else {
-                    ajuste = (tempo/v)%2;
+                else {                           // elevador normal, inicia com os outros
+                    ajuste = (d/v)%2;
                     if(ajuste==0){
-                        if(tempo%v==0) falta = 0;
-                        else falta = (v-tempo%v)+v;
+                        if(d%v==0) falta = 0;
+                        else falta = (v-d%v)+v;
                     } else {
-                        if(tempo%v==0) falta = v;
-                        else falta = v-(tempo%v);
+                        if(d%v==0) falta = v;
+                        else falta = v-(d%v);
                     }
                 }
             }
-            if((v+c+falta)<mint){
-                mint = falta+v+c;
+            if((v+c+falta)<distancia[lista[pos].prox[i].fim]){
+                distancia[lista[pos].prox[i].fim] = falta+v+c; // ?
                 kx = lista[pos].prox[i].fim;
-                pq.push(make_pair(mint, kx));
+                pq.push(make_pair(distancia[lista[pos].prox[i].fim], kx));
             }   
         }
     }
@@ -70,6 +70,7 @@ int main(){
     cin.tie(0);cout.tie(0);
     int k, n, a, b, id = 0;
     cin >> k >> n;
+    for(int i=0;i<1007;++i) distancia[i] = 1000000007;
     Item *elevators = (Item*) calloc(1006, sizeof(Item));
     for(int j=0; j<n; ++j){
         cin >> a;

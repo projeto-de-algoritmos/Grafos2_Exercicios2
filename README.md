@@ -15,11 +15,12 @@
 Exercícios do Sphere Online Judge:
 
 - [SHPATH - The Shortest Path](https://www.spoj.com/problems/SHPATH/)
+- [MELE3 - MELE3](https://www.spoj.com/problems/MELE3/)
 
 Exercícios do LeetCode:
 
-- [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
-- [1368. Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+- [1631 - Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)
+- [1368 - Minimum Cost to Make at Least One Valid Path in a Grid](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
 
 ## Screenshots
 
@@ -30,6 +31,14 @@ A seguir as imagens dos algoritmos enviados no juiz. É possível observar os st
 Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Em uma lista de cidades, precisa encontrar a menor distância entre duas cidades dado o nome de ambas, sendo um grafo direcionado.
 
 ![Imagem SHPATH](assets/SHPATH.png)
+
+### MELE3 - MELE3
+
+Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Dada uma quantidade N de elevadores e K de pisos, o programa deve imprimir uma única linha com o menor caminho do primeiro andar até o último andar, sabendo que todos os elevadores param em apenas 2 pisos e que eles percorrem um andar em 5 segundos. Quando atingem o piso de destino, começam a descer. Caso o elevador esteja no mesmo piso no momento, pode-se trocar imediatamente de elevador.
+
+![Imagem MELE3](assets/MELE3.png)
+
+### 1631 - Path With Minimum Effort
 
 Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui um tamanho/altura e é desejado encontrar o caminho com o menor esforço, ou seja com a menor variação de altura, entre a célula (0,0) até a célula (n,n). O esforço é definido como sendo a diferença máxima absoluta entre as alturas das células.
 
