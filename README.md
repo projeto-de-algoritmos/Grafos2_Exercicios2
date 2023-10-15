@@ -40,9 +40,15 @@ Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo
 
 ### 1631 - Path With Minimum Effort
 
-Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui um tamanho/altura e é desejado encontrar o caminho com o menor esforço, ou seja com a menor variação de altura, entre a célula (0,0) até a célula (n,n). O esforço é definido como sendo a diferença máxima absoluta entre as alturas das células.
+Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui um tamanho/altura e é desejado encontrar o caminho com o menor esforço, ou seja com a menor variação de altura, entre a célula (0,0) até a célula (quantLinha, quantColuna). O esforço é definido como sendo a diferença máxima absoluta entre as alturas das células.
 
-![Imagem da página do problema com a submissão aceita.](assets/1631.png)
+![Imagem da página do problema 1631 com a submissão aceita.](assets/1631.png)
+
+### 1368 - Minimum Cost to Make at Least One Valid Path in a Grid
+
+Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui uma direção, sendo possível mudar essa direção uma única vez com um custo 1 e é desejado encontrar o caminho com o menor custo entre a célula (0,0) até a célula (quantLinha, quantColuna).
+
+![Imagem da página do problema 1368 com a submissão aceita.](assets/1368.png)
 
 ## Instalação
 

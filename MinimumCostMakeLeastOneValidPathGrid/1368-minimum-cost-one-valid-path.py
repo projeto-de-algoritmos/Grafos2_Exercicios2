@@ -1,6 +1,5 @@
 import heapq
 
-
 class Solution:
     def minCost(self, grid: List[List[int]]) -> int:
         
@@ -38,10 +37,13 @@ class Solution:
 
                 # Comparando os movimentos.
                 if grid[lin][col] != tipoMovimento:
-                    punicao = 1                                                   # Muda a direcao.
-                    novoCusto = cost + punicao                                    # Atualiza o custo.
-                    # Compara e salva na heap o menor custo.
-                    if novoCusto < custos[tempLinha][tempColuna]:                 
-                        custos[tempLinha][tempColuna] = novoCusto
-                        heapq.heappush(heap, [tempLinha, tempColuna, novoCusto])
+                    punicao = 1                                                 # Muda a direcao.
+                else:
+                    punicao = 0                                                 # Mantem a direcao.
 
+                # Atualiza o custo.    
+                novoCusto = cost + punicao                                      
+                # Compara e salva na heap o menor custo.
+                if novoCusto < custos[tempLinha][tempColuna]:                 
+                    custos[tempLinha][tempColuna] = novoCusto
+                    heapq.heappush(heap, [tempLinha, tempColuna, novoCusto])
