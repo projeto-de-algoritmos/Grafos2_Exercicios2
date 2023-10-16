@@ -24,11 +24,13 @@ Exercícios do LeetCode:
 
 ## Screenshots
 
-A seguir as imagens dos algoritmos enviados no juiz. É possível observar os status de conclusão do problema e uma descrição do algoritmo utilizado.
+As seções a seguir explicitam os exercícios resolvidos e apresentam uma breve explicação das resoluções. É possível observar o status de conclusão do problema e uma descrição do algoritmo utilizado.
 
 ### SHPATH - The Shortest Path
 
 Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Em uma lista de cidades, precisa encontrar a menor distância entre duas cidades dado o nome de ambas, sendo um grafo direcionado.
+
+![Imagem SHPATH1](assets/enunciadoSHPATH.png)
 
 ![Imagem SHPATH](assets/SHPATH.png)
 
@@ -36,6 +38,7 @@ Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo
 
 Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Dada uma quantidade N de elevadores e K de pisos, o programa deve imprimir uma única linha com o menor caminho do primeiro andar até o último andar, sabendo que todos os elevadores param em apenas 2 pisos e que eles percorrem um andar em 5 segundos. Quando atingem o piso de destino, começam a descer. Caso o elevador esteja no mesmo piso no momento, pode-se trocar imediatamente de elevador.
 
+![Imagem MELE31](assets/enunciadoMELE3.png)
 ![Imagem MELE3](assets/MELE3.png)
 
 ### 1631 - Path With Minimum Effort
