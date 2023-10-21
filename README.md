@@ -52,7 +52,7 @@ Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em
 
 Utilização do algoritmo de Dijkstra com matriz e heap de mínimo em python. Em uma matriz 2D, cada célula possui uma direção, sendo possível mudar essa direção uma única vez com um custo 1 e é desejado encontrar o caminho com o menor custo entre a célula (0,0) até a célula (quantLinha, quantColuna).
 
-![Imagem do enunciado 1368.](assets/enunciado1631.png)
+![Imagem do enunciado 1368.](assets/enunciado1368.png)
 ![Imagem da página do problema 1368 com a submissão aceita.](assets/1368.png)
 
 ## Instalação
