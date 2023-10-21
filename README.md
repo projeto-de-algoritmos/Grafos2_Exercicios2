@@ -36,7 +36,7 @@ Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo
 
 ### MELE3 - MELE3 (605 - 42.46%)
 
-Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Dada uma quantidade N de elevadores e K de pisos, o programa deve imprimir uma única linha com o menor caminho do primeiro andar até o último andar, sabendo que todos os elevadores param em apenas 2 pisos e que eles percorrem um andar em 5 segundos. Quando atingem o piso de destino, começam a descer. Caso o elevador esteja no mesmo piso no momento, pode-se trocar imediatamente de elevador.
+Utilização do algoritmo de Dijkstra com lista de adjacência e heap de mínimo da STL (Standard Template Library) do C++. Dada uma quantidade N de elevadores e K de pisos, o programa deve imprimir uma única linha com o custo em tempo do menor caminho do primeiro andar até o último andar, sabendo que todos os elevadores param em apenas 2 pisos e que eles percorrem um andar em 5 segundos. Quando atingem o piso de destino, começam a descer. Caso o elevador esteja no mesmo piso no momento, pode-se trocar imediatamente de elevador. O problema central está em calcular o tempo que falta para cada elevador chegar a tal piso e escolher o menor possível.
 
 ![Imagem MELE31](assets/enunciadoMELE3.png)
 ![Imagem MELE3](assets/MELE3.png)
